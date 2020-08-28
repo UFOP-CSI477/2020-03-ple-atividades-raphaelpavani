@@ -209,6 +209,7 @@ a {
 }
 
 table,
+th,
 td,
 tr {
   border: #dbd053 groove 5px;
