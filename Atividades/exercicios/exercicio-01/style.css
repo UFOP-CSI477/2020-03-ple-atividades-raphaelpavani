@@ -207,3 +207,15 @@ a {
   color: #c89933;
   line-height: 22px;
 }
+
+table,
+td,
+tr {
+  border: #dbd053 groove 5px;
+  font-size: 32px;
+  color: #c89933;
+}
+
+thead tr th {
+  font-weight: bold;
+}
