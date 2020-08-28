@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cadastros:</title>
+  </head>
+  <body>
+    <div>
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./cadastros.html" style="color: #dbd053">Cadastros</a>
+            </li>
+            <li>
+              <a href="/">Lançamentos</a>
+            </li>
+            <li>
+              <a
+                href="./relatorios.html"
+                >Relatórios</a
+              >
+            </li>
+            <li>
+              <a href="/perfil.html">Perfil</a>
+            </li>
+            <li>
+              <a href="/" >Sair</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div>
+      <section>
+        <div class="wrapper">
+          <h1>Dados do cadastro do cliente:</h1>
+          <form action="" method="get">
+            <div>
+              <label class="rotulo" for="nome">Nome:</label>
+              <input class="entrada" type="text" name="nome" id="nome" placeholder="Insira seu nome"/>
+            </div>
+            <div>
+              <label class="rotulo" for="endereco" >Endereço:</label>
+              <input
+                class="entrada"
+                type="text"
+                name="endereco"
+                id="endereco"
+                placeholder="Insira seu enderenço"
+              />
+            </div >
+            <div class="generos">
+              <label class="rotulo">Gênero:</label>
+              <div class="radios">
+                <input type="radio" name="gender" id="feminino" value="F" />
+                <label for="feminino">Feminino</lab1el>
+              </div>
+              <div class="radios">
+                <input type="radio" name="gender" id="masculino" value="M" />
+                <label for="masculino">Masculino. </label>
+              </div>
+              <div class="radios">
+                <input type="radio" name="gender" id="nb" value="NB"/>
+                <label for="nb">Não Binário. </label>
+              </div>
+              <div class="radios">
+                <input type="radio" name="gender" id="sem_resposta"  value="SR"/>
+                <label for="sem_resposta">Prefiro não informar.</label>
+              </div>
+            </div>
+
+            <div>
+              <label>Áreas de interesse:</label>
+              <div>
+                <input type="checkbox" name="area[0]" id="web">
+                <label for="web">Sistemas Web</label>
+              </div>
+              <div>
+                <input type="checkbox" name="area[1]" id="bd">
+                <label for="bd">Banco de dados</label>
+              </div>
+              <div>
+                <input type="checkbox" name="area[2]" id="redes">
+                <label for="redes">Redes</label>
+              </div>
+            </div>
+
+            <input class="submit" type="submit" value="Cadastrar" />
+            <input type="reset" value="Limpar">
+            <a href="./index.html">Voltar</a>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
