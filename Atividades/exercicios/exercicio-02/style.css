@@ -214,6 +214,21 @@ a:hover {
   line-height: 22px;
 }
 
+.envolve {
+  border: solid #c89933 5px;
+  width: 50%;
+  margin: 20px auto;
+  padding: 12px;
+}
+.envolve {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: 30px;
+  color: #c89933;
+  line-height: 22px;
+}
+
 table,
 th,
 td,
@@ -226,6 +241,13 @@ tr {
 thead tr th {
   font-weight: bold;
 }
+th:hover {
+  background-color: #dddf77;
+}
+
+tbody tr :hover {
+  background-color: #dddf77;
+}
 
 .tabela,
 table {
@@ -236,4 +258,10 @@ table {
 .contato h2 {
   font-size: 25px;
   line-height: 18px;
+}
+.back {
+  background-color: #c89933;
+  color: #5c415d;
+  border: solid #dbd053 1px;
+  margin: 0 3px;
 }
