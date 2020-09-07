@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <title>Cadastros:</title>
+  </head>
+  <body>
+    <div>
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./cadastros.html" style="color: #dbd053">Cadastros</a>
+            </li>
+            <li>
+              <a href="/">Lançamentos</a>
+            </li>
+            <li>
+              <a
+                href="./relatorios.html"
+                >Relatórios</a
+              >
+            </li>
+            <li>
+              <a href="/perfil.html">Perfil</a>
+            </li>
+            <li>
+              <a href="/" >Sair</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div>
+      <section>
+        <div class="wrapper" >
+          <h1>Dados do cadastro do cliente:</h1>
+          <form action="" method="get">
+            <div class="form-group">
+              <label class="rotulo" for="nome">Nome:</label>
+              <input class="form-control" class="entrada" type="text" name="nome" id="nome" placeholder="Insira seu nome"/>
+            </div>
+            <div class="form-group" >
+              <label class="rotulo" for="endereco" >Endereço:</label>
+              <input
+              class="form-control"
+                class="entrada"
+                type="text"
+                name="endereco"
+                id="endereco"
+                placeholder="Insira seu enderenço"
+              />
+            </div >
+            <div class="generos">
+              <label class="rotulo">Gênero:</label>
+              <br>
+              
+              <div class="radios" class="form-group" class="form-check">
+                <input type="radio" name="gender" id="feminino" value="F" class="form-check-input"/>
+                <label for="feminino" class="form-check-label">Feminino</lab1el>
+              </div>
+              <div class="radios" class="form-group" class="form-check">
+                <input type="radio" name="gender" id="masculino" value="M" class="form-check-input" />
+                <label for="masculino" class="form-check-label">Masculino. </label>
+              </div>  
+              <div class="radios" class="form-group" class="form-check">
+                <input type="radio" name="gender" id="nb" value="NB" class="form-check-input"/>
+                <label for="nb" class="form-check-label">Não Binário. </label>
+              </div>
+              <div class="radios" class="form-group" class="form-check">
+                <input type="radio" name="gender" id="sem_resposta" class="form-check-input"  value="SR"/>
+                <label for="sem_resposta" class="form-check-label">Prefiro não informar.</label>
+              </div>
+            </div>
+
+            <div class=" envolve">
+              <label>Áreas de interesse:</label>
+              <div class="lbl_interesse" class="form-group" class="form-check">
+                <input type="checkbox" name="area[0]" id="web" class="form-check-input">
+                <label for="web" class="form-check-label" >Sistemas Web</label>
+              </div>
+              <div class="lbl_interesse" class="form-group" class="form-check">
+                <input type="checkbox" name="area[1]" id="bd" class="form-check-input">
+                <label for="bd" class="form-check-label">Banco de dados</label>
+              </div>
+              <div class="lbl_interesse" class="form-group" class="form-check">
+                <input type="checkbox" name="area[2]" id="redes" class="form-check-input">
+                <label for="redes" class="form-check-label">Redes</label>
+              </div>
+            </div>
+
+            <input class="submit" type="submit" value="Cadastrar" class="btn btn-danger"/>
+            <input type="reset" value="Limpar"class="btn btn-danger">
+            <a class="back" href="./index.html">Voltar</a>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
