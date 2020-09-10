@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="180" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 04</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      setTimeout(function () {
+        console.log("Aplicão com atualizacao");
+        let d = new Date();
+        document.getElementById("demo").innerHTML = d.toString();
+        window.location.reload(2);
+      }, 2000);
+    </script>
+  </body>
+</html>
