@@ -8,6 +8,7 @@ function fetchJokes() {
       displayJokes.innerText = piada.value;
     });
 }
+/**evento para atualizar uma nova piada */
 btnNext.addEventListener("click", fetchJokes);
 
 fetchJokes();
