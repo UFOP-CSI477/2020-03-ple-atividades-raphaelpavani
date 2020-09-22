@@ -9,7 +9,7 @@
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <title>Estados e Produtos</title>
+  <title>About city, States and Products</title>
 </head>
 
 <body>
