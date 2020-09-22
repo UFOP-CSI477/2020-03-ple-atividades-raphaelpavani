@@ -4,38 +4,43 @@ namespace App\Database;
 
 use PDO;
 
-class AdapterSQLite implements AdapterInterface {
+class AdapterSQLite implements AdapterInterface
+{
 
-    // Verifique o caminho do arquivo conforme a sua estrutura.    
-    private $dbfile = __DIR__ . "/../../../dados/db/database.sqlite";
+    public function open()
+    {
+        $dbfile = __DIR__ . "./db/database.sqlite";
+        $dbuser = "";
+        $dbpassword = "";
+        $dbhost = "";
 
-    private $strConnection = "sqlite:";
+        $strConnection = "sqlite:" . $dbfile;
 
-    private $connection = null;
+        $connection = new PDO($strConnection, $dbuser, $dbpassword);
 
-    public function open() {
+        $connection->query("CREATE TABLE IF NOT EXISTS estados(id INT PRIMARY KEY, nome VARCHAR, sigla VARCHAR)");
+        $connection->query("CREATE TABLE IF NOT EXISTS cidades(id INT PRIMARY KEY, nome VARCHAR)");
+        $connection->query("CREATE TABLE IF NOT EXISTS produtos(id INT PRIMARY KEY, nome VARCHAR, um VARCHAR)");
 
-        try {
-
-            $this->connection = new PDO($this->strConnection . $this->dbfile);       
-        
-            print "Database: success.";
-        
-        } catch(Expection $e) {
-            die("Database error: " . $e->getMessage());
-        }
-
+        return $connection;
     }
 
-    public function close() {
-        $this->connection = null;
+    public function close()
+    {
     }
 
-    public function get() {
-        if ( $this->connection === null ) {
-            $this->connection->open();
-        }
-        return $this->connection;
+    public function getEstados($connection)
+    {
+        return $connection->query("SELECT * FROM estados");
     }
 
+    public function getCidades($connection)
+    {
+        return $connection->query("SELECT * FROM cidades");
+    }
+
+    public function getProdutos($connection)
+    {
+        return $connection->query("SELECT * FROM produtos");
+    }
 }
