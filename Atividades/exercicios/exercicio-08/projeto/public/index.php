@@ -22,11 +22,26 @@ $result = $connection->getAdapter()->get()->query($sql);
 
 echo "<hr><ol>";
 
-while($e = $result->fetch()) {
-    echo "<li>" .$e["nome"] . "-" . $e['sigla'] . "</li>\n";
+while ($e = $result->fetch()) {
+    echo "<li>" . $e["nome"] . "-" . $e['sigla'] . "</li>\n";
+}
+$sql = "SELECT * FROM produtos";
+$result = $connection->getAdapter()->get()->query($sql);
+echo "</ol><hr>";
+
+echo "<hr><ol>";
+
+while ($e = $result->fetch()) {
+    echo "<li>" . $e["id"] . "-" . $e["nome"] . "-" . $e['um'] . "</li>\n";
+}
+$sql = "SELECT * FROM cidades";
+$result = $connection->getAdapter()->get()->query($sql);
+while ($e = $result->fetch()) {
+    echo "<li>" . $e["id"] . "-" . $e["nome"] . "-" . $e['estado_id'] . "</li>\n";
 }
 
 echo "</ol><hr>";
+
 
 // ------------------------------------------------------------
 
