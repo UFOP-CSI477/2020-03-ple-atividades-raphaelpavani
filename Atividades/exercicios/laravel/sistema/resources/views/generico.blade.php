@@ -20,18 +20,18 @@
 
     }
   </style>
-  <title>Grocery Store</title>
+  <title>Generic Store</title>
 </head>
 
 <body>
   <div class="container-fluid">
     <nav class="   navbar-light bg-light">
-      <a href="{{route('principal')}}" class="navbar-brand logo">
+      <a href="{{route('generico')}}" class="navbar-brand logo">
         <img src="https://www.flaticon.com/svg/static/icons/svg/123/123226.svg" alt="logo">Alfinha
       </a>
       <ul class="nav">
-        <li class="nav-item"><a href="{{route('principal')}}" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="{{route('estados.index')}}" class="nav-link">Estados</a></li>
+        <li class="nav-item"><a href="{{route('generico')}}" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="{{route('produtos.index')}}" class="nav-link">Produtos</a></li>
         <li class="nav-item"><a href="/cidades" class="nav-link">Cidades</a></li>
         <li class="nav-item"><a href="/vendas" class="nav-link">Vendas</a></li>
 

@@ -1,21 +1,20 @@
-@extends('principal')
+@extends('generico')
 
 @section('conteudo')
-
 <table class="table table-bordered table-hover table-striped">
   <thead class="thead-dark">
     <tr>
       <th>Id</th>
       <th>Nome</th>
-      <th>Sigla</th>
+      <th>UM</th>
     </tr>
   </thead>
   <tbody>
-    @foreach($estados as $e)
+    @foreach($produtos as $p)
     <tr>
-      <td>{{$e->id}}</td>
-      <td>{{$e->nome}}</td>
-      <td>{{$e->sigla}}</td>
+      <td>{{$p->id}}</td>
+      <td>{{$p->nome}}</td>
+      <td>{{$p->um}}</td>
     </tr>
     @endforeach
   </tbody>

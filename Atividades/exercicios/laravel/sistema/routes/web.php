@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Estado;
 use App\Models\Produto;
 use App\Http\Controllers\EstadoController;
+use App\Http\Controllers\ProdutoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,14 +16,17 @@ use App\Http\Controllers\EstadoController;
 |
 */
 
+// Route::get('/', function () {
+//     return view('principal');
+// })->name('principal');
+
+// Route::resource('/estados', EstadoController::class);
+
 Route::get('/', function () {
-    return view('principal');
-})->name('principal');
+    return view('generico');
+})->name('generico');
 
-Route::resource('/estados', EstadoController::class);
-
-
-
+Route::resource('/produtos', ProdutoController::class);
 
 
 
@@ -53,10 +57,10 @@ Route::resource('/estados', EstadoController::class);
 //     return view('lista', ['dados' => $produtos]);
 // });
 
-// Route::get('/produtos/{id}', function ($id) {
-//     $produto = Produto::findOrfail($id);
-//     if ($produto == null) {
-//         return 'ID inválido';
-//     }
-//     return view('lista', ['dados' => $produto]);
-// });
+Route::get('/produtos/{id}', function ($id) {
+    $produto = Produto::findOrfail($id);
+    if ($produto == null) {
+        return 'ID inválido';
+    }
+    return view('lista', ['dados' => $produto]);
+});
