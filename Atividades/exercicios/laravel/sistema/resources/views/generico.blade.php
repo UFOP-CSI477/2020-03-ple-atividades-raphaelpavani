@@ -20,7 +20,7 @@
 
     }
   </style>
-  <title>Generic Store</title>
+  <title>Generic Store!</title>
 </head>
 
 <body>
